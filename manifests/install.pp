@@ -25,7 +25,7 @@ class codedeploy::install {
         }
       }
       exec { 'download_codedeploy_installer':
-        command => '/usr/bin/wget https://aws-codedeploy-eu-west-1.s3.amazonaws.com/latest/install',
+        command => '/usr/bin/wget --quiet --timestamping https://s3.amazonaws.com/aws-codedeploy-us-east-1/latest/install',
         cwd     => '/tmp',
         creates => '/tmp/install',
       }
