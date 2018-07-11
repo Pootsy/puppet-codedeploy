@@ -3,9 +3,7 @@
 # This class is meant to be called from codedeploy.
 # It sets variables according to platform.
 #
-class codedeploy::params(
-   $max_revisions = 5,
-) {
+class codedeploy::params {
   case $::osfamily {
     'Debian': {
       $package_url  = 'https://s3.amazonaws.com/aws-codedeploy-us-east-1/latest/codedeploy-agent_all.deb'
@@ -45,6 +43,7 @@ class codedeploy::params(
     }
   }
 
+  $max_revisions = 5
   $log_aws_wire = false
   $wait_between_runs = 1
 

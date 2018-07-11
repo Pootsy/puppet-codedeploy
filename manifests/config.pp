@@ -2,7 +2,7 @@
 #
 # This class is called from codedeploy for install.
 #
-class codedeploy::config inherits ::codedeploy::params {
+class codedeploy::config {
   case $::osfamily {
     'RedHat', 'Amazon', 'Debian': {
       file {
