@@ -43,8 +43,8 @@ class codedeploy::params {
     }
   }
 
+  $max_revisions = 5
   $log_aws_wire = false
   $wait_between_runs = 1
-  $max_revisions = 5
 
 }
